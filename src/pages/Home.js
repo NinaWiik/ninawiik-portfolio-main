@@ -1,15 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NinaPoppy from "../images/Eukanuba_Companion_Portrett-N+P-240209-140-Enhanced-NR-Edit.jpg-WEB.jpg";
 import NinaPoppy2 from "../images/ninapoppy1.jpg";
+import PoppyOslo from "../images/Oslo_Photoshoot-240306-203-Enhanced-NR-Edit.jpg-WEB.jpg";
 import Selvportrett from "../images/Selvportrett-hagen-Poppy231110-9-Enhanced-NR.psd-v1.jpg-web.jpg";
 import Brie from "../images/Brie_Photoshoot-long.jpg";
 
 export default function Home() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <body>
       <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-2/3 p-8">
+        <div className="w-full lg:w-2/3 py-8">
           <h2 className="text-cream">Dyrefotograf i Vestfold</h2>
           <h3 className="mb-6 text-cream">Fanger magiske øyeblikk av ditt dyr</h3>
           <p>
@@ -23,19 +32,21 @@ export default function Home() {
           <p>
             Bilder er imidlertid ikke bare det som hjelper oss med å huske alt dette. De kan også gjøre alt det vi føler inni oss synlig for deg og for andre. Litt magisk, hvis du spør meg.
           </p>
-          <button className="bg-teal-light hover:bg-teal-dark text-white font-bold py-2 px-4 rounded mt-4">Kontakt meg for å lage magiske øyeblikk</button>
+          <Link to="/contact" onClick={scrollToTop}>
+            <button className="bg-teal-light hover:bg-teal-dark text-white font-bold py-2 px-4 rounded mt-4">Kontakt meg for å lage magiske øyeblikk</button>
+          </Link>
         </div>
 
         {/* Image column */}
         <div className="w-full lg:w-1/3 p-8">
-          <img src={NinaPoppy} alt="Bilde" className="rounded-md" />
+          <img src={PoppyOslo} alt="Bilde" className="rounded-md" />
         </div>
       </div>
 
       <div className=" bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Image column */}
-        <div className="w-full lg:w-1/3 p-8">
-          <img src={NinaPoppy2} alt="Bilde" className="rounded-md" />
+        <div className="w-full lg:w-1/3 py-8">
+          <img src={NinaPoppy} alt="Bilde" className="rounded-md" />
         </div>
         {/* Text column */}
         <div className="w-full lg:w-2/3 p-8">
@@ -56,23 +67,25 @@ export default function Home() {
 
       <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-2/3 p-8">
+        <div className="w-full lg:w-2/3 py-8">
           <h2 className="text-cream">Hvem er jeg?</h2>
           <h3 className="mb-6 text-cream">Mitt navn er Nina Wiik!</h3>
           <p>
             Crazy dog mom, tech nerd, fotoentuist og alltid på jakt etter det perfekte øyeblikket, fantastiske plasser og evig søken etter ny kunnskap! Du finner meg somregel med en aussie
-            ved min side, og gjerne et kamera i hånden!
+            ved min side, og gjerne et kamera i hånden! Vi holder til i Andebu, Sandefjord. Men kjører både til Tønsberg, Horten, Holmestrand og Larvik for å ha photoshoots.
           </p>
           <p>
             Jeg har alltid vært interessert i fotografering og jeg fikk mitt første kamera når jeg var 14 år. Og siden da har jeg løpt rundt å tatt bilder av alt og alle. På den tiden
             drev jeg aktivt med hest og konkurranseridning, så det var mye hest og hestekonkurranser som ble knipset igjennom kameraet, i tillegg til min første hund Chana, som var en nydelig
-            golden retriever tispe vi hadde på den tiden.
+            golden retriever tispe vi hadde på den tiden. Nå er det mest hundefotografering som er i fokus, men jeg tar gjerne bilder av andre dyr også!
           </p>
           <p>
             Jeg har alltid vært på leting etter de perfekte plassene å ta bilder, slik at man lage noe magisk utav det. Jeg leter etter små og vakre øyeblikk som jeg har lyst å vise deg gjennom
             bildene mine, og jeg elsker hvordan man kan leke med lyset for å oppnå akuratt dette.
           </p>
-          <button className="bg-teal-light hover:bg-teal-dark text-white font-bold py-2 px-4 rounded mt-4">Bli bedre kjent med meg</button>
+          <Link to="/about" onClick={scrollToTop}>
+            <button className="bg-teal-light hover:bg-teal-dark text-white font-bold py-2 px-4 rounded mt-4">Bli bedre kjent med meg</button>
+          </Link>
         </div>
 
         {/* Image column */}
