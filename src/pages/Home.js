@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NinaPoppy from "../images/Eukanuba_Companion_Portrett-N+P-240209-140-Enhanced-NR-Edit.jpg-WEB.jpg";
-import NinaPoppy2 from "../images/ninapoppy1.jpg";
 import PoppyOslo from "../images/Oslo_Photoshoot-240306-203-Enhanced-NR-Edit.jpg-WEB.jpg";
 import Selvportrett from "../images/Selvportrett-hagen-Poppy231110-9-Enhanced-NR.psd-v1.jpg-web.jpg";
 import Brie from "../images/Brie_Photoshoot-long.jpg";

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Brie from "../images/Brie_foran_web.jpg";
-import Io from "../images/iolaying.jpg";
 import FAQ from "../components/FAQ";
 import Kaja from "../images/KajaLong.jpg";
 
@@ -39,7 +38,7 @@ export default function Home() {
           </div>
 
           {/* Image column */}
-          <div className="w-full lg:w-1/3 py-8">
+          <div className="w-full lg:w-1/3 pb-8 lg:py-8">
             <img src={Brie} alt="Bilde" className="rounded-md" />
           </div>
         </div>

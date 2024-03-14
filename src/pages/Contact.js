@@ -1,6 +1,4 @@
 import Poppy1 from "../images/Skogen_Hasken_Poppy231014-3-NR-2.jpg-Web.jpg";
-import Poppy2 from "../images/Skogen_Hasken_Poppy231014-85-fullWidth-Web.jpg";
-import Poppy3 from "../images/Skogen_Hasken_Poppy231014-85-Width-Web.jpg";
 import PoppyOpera from "../images/PoppyOpera.jpg";
 import { InstagramEmbed } from 'react-social-media-embed';
 
