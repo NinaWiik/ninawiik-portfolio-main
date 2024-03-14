@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-blush text-[#21262B] font-bold py-6">
       <div className="container mx-auto text-center">
-        <ul className="flex justify-center space-x-6">
+        <ul className="flex flex-col justify-center lg:flex-row lg:justify-center space-y-2 lg:space-x-6 lg:space-y-0">
           <li>
             <Link to="/" className="text-lg hover:text-teal-dark" onClick={scrollToTop}>
               Home

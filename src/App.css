@@ -98,3 +98,14 @@ p {
 a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  /* Adjust font size for smaller screens */
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 40px; /* Example smaller font size for mobile screens */
+  }
+}

@@ -1,10 +1,26 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/NW normal.png";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // Function to close the mobile menu
+  const closeMenu = () => {
+    setIsNavOpen(false);
+  };
+
+  // Disable scrolling on the body when the mobile menu is open
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isNavOpen]);
 
   return (
     <div className="bg-blush p-4 flex justify-between items-center">
@@ -20,9 +36,9 @@ export default function Navbar() {
             className="HAMBURGER-ICON space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -31,7 +47,7 @@ export default function Navbar() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-8 w-8 text-black"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -45,19 +61,19 @@ export default function Navbar() {
             </div>
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
               {/* Links on the right */}
-              <Link to="/" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2">
+              <Link to="/" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2" onClick={closeMenu}>
                 Home
               </Link>
-              <Link to="/about" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2">
+              <Link to="/about" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2" onClick={closeMenu}>
                 About
               </Link>
-              <Link to="/p" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2">
+              <Link to="/pricing" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2" onClick={closeMenu}>
                 The Photoshoot
               </Link>
-              <Link to="/gallery" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2">
+              <Link to="/gallery" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2" onClick={closeMenu}>
                 Portfolio
               </Link>
-              <Link to="/contact" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2">
+              <Link to="/contact" className="navbar-link cursor-pointer text-lg sm:text-xl hover:text-teal-dark hover:no-underline my-2" onClick={closeMenu}>
                 Contact
               </Link>
             </ul>
@@ -67,111 +83,14 @@ export default function Navbar() {
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
           {/* Links on the right */}
           <div className={`sm:flex ${isNavOpen ? 'block' : 'hidden'} mt-4 sm:mt-0`}>
-            <Link to="/" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline">Home</Link>
-            <Link to="/about" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline">About</Link>
-            <Link to="/pricing" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline">The Photoshoot</Link>
-            <Link to="/gallery" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline">Portfolio</Link>
-            <Link to="/contact" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline">Contact</Link>
+            <Link to="/" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline" onClick={closeMenu}>Home</Link>
+            <Link to="/about" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline" onClick={closeMenu}>About</Link>
+            <Link to="/pricing" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline" onClick={closeMenu}>The Photoshoot</Link>
+            <Link to="/gallery" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline" onClick={closeMenu}>Portfolio</Link>
+            <Link to="/contact" className="navbar-link cursor-pointer mx-10 text-lg sm:text-xl hover:text-teal-dark hover:no-underline" onClick={closeMenu}>Contact</Link>
           </div>
         </ul>
       </nav>
     </div>
   );
-
-
 }
-
-// export default function Navbar() {
-//   const location = useLocation();
-
-//   const showHomeBgImage = location.pathname === "/";
-//   const showAboutBgImage = location.pathname === "/about";
-//   const showPricingBgImage = location.pathname === "/pricing";
-//   const showGalleryBgImage = location.pathname === "/gallery";
-//   const showContactBgImage = location.pathname === "/contact";
-
-//   return (
-//     <div
-//       className={`min-h-screen flex flex-col items-center justify-start ${
-//         showHomeBgImage
-//           ? "home-bg-image"
-//           : showPricingBgImage
-//           ? "pricing-bg-image"
-//           : showAboutBgImage
-//           ? "about-bg-image"
-//           : showGalleryBgImage
-//           ? "gallery-bg-image"
-//           : showContactBgImage
-//           ? "contact-bg-image"
-//           : "default-bg-image"
-//       }`}
-//     >
-//       <div className="w-full hidden md:block">
-//         <div className="flex flex-col sm:flex-row">
-//           <div className="w-full  md:w-1/5 p-4 flex items-center justify-center">
-//             <Link to="/about" className="navbar-link p-2 text-lg sm:text-3xl">
-//               ABOUT
-//             </Link>
-//           </div>
-//           <div className="w-full md:w-1/5 p-4 flex items-center justify-center">
-//             <Link to="/pricing" className="navbar-link p-2 text-lg sm:text-3xl">
-//               PRICING
-//             </Link>
-//           </div>
-//           <div className="w-full md:w-2/5 p-4 flex items-center justify-center">
-//             <Link to="/" className="text-center mt-4 sm:mt-0 sm:mb-4 sm:mt-4">
-//               <img src={logo} alt="desc" className="max-w- sm:w-full" />
-//             </Link>
-//           </div>
-//           <div className="w-full md:w-1/5 p-4 flex items-center justify-center">
-//           <Link to="/gallery" className="navbar-link p-2 text-lg sm:text-3xl">
-//               GALLERY
-//             </Link>
-//           </div>
-//           <div className="w-full md:w-1/5 p-4 flex items-center justify-center">
-//           <Link to="/contact" className="navbar-link p-2 text-lg sm:text-3xl">
-//               CONTACT
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="w-full block md:hidden">
-//       <div class="flex flex-col h-72 w-full items-center"> 
-//   <div class="w-full flex justify-center"> 
-//     <Link to="/" className="">
-//       <img src={logo} alt="desc" className="max-w-xs sm:w-full" />
-//     </Link>
-//   </div>
-//   <div class="flex">
-//     <div class="flex-1 p-4">
-//       <Link to="/about" className="navbar-link p-2 text-lg">
-//         ABOUT
-//       </Link>
-//     </div>
-//     <div class="flex-1 p-4">
-//       <Link to="/pricing" className="navbar-link p-2 text-lg">
-//         PRICING
-//       </Link>
-//     </div>
-//   </div>
-//   <div class="flex">
-//     <div class="flex-1 p-4">
-//     <Link to="/gallery" className="navbar-link p-2 text-lg">
-//         GALLERY
-//       </Link>
-//     </div>
-//     <div class="flex-1 p-4">
-//     <Link to="/contact" className="navbar-link p-2 text-lg">
-//         CONTACT
-//       </Link>
-//     </div>
-//   </div>
-// </div>
-// </div>
-
-//     </div>
-
-    
-//   );
-// }

@@ -16,7 +16,7 @@ export default function Home() {
       <body>
         <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
           {/* Text column */}
-          <div className="w-full lg:w-2/3 py-8">
+          <div className="w-full lg:w-2/3 py-8 lg:pr-8">
             <h2 className="text-cream">Priser og informasjon</h2>
             <h3 className="mb-6 text-cream">The Photoshoot</h3>
             <p>
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
 
           {/* Image column */}
-          <div className="w-full lg:w-1/3 p-8">
+          <div className="w-full lg:w-1/3 py-8">
             <img src={Brie} alt="Bilde" className="rounded-md" />
           </div>
         </div>

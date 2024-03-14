@@ -21,7 +21,7 @@ export default function About() {
     <body>
         <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-2/3 py-8">
+        <div className="w-full lg:w-2/3 py-8 lg:pr-8">
           <h2 className="text-cream">Bli bedre kjent med meg</h2>
           <h3 className="mb-6 text-cream">Hei! Mitt navn er Nina!</h3>
           <p>
@@ -43,18 +43,18 @@ export default function About() {
         </div>
 
         {/* Image column */}
-        <div className="w-full lg:w-1/3 py-8">
+        <div className="w-full lg:w-1/3 pb-8 lg:py-8">
           <img src={NinaPoppy} alt="Bilde" className="rounded-md" />
         </div>
       </div>
 
       <div className="bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Image column */}
-        <div className="w-full lg:w-1/3 p-8 pl-0">
+        <div className="w-full lg:w-1/3 py-8">
           <img src={PoppyOslo} alt="Bilde" className="rounded-md" />
         </div>
         {/* Text column */}
-        <div className="w-full lg:w-2/3 py-8">
+        <div className="w-full lg:w-2/3 pb-8 lg:py-8 lg:pl-8">
           <h3 className="mb-6 text-[#21262B]">Mitt Team!</h3>
           <p className="text-[#21262B]">
             For å sikre de beste bildene og maksimere resultatene, samarbeider jeg av og til med min mann Christian for å skape de mest fantastiske bildene av våre hunder. Han er en ekstremt
@@ -77,7 +77,7 @@ export default function About() {
 
       <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-2/3 py-8">
+        <div className="w-full lg:w-2/3 py-8 lg:pr-8">
           <h2 className="text-cream">Min filosofi</h2>
           <h3 className="mb-6 text-cream">Happy dog - Happy life!</h3>
           <p>
@@ -97,7 +97,7 @@ export default function About() {
         </div>
 
         {/* Image column */}
-        <div className="w-full lg:w-1/3 p-8">
+        <div className="w-full lg:w-1/3 pb-8 lg:py-8">
           <img src={Kaja} alt="Bilde" className="rounded-md" />
         </div>
       </div>

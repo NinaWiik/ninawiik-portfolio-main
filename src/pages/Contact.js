@@ -9,8 +9,8 @@ export default function Contact() {
     <body>
       <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-2/3 py-8 pr-8">
-          <h2 className="text-cream">Priser og informasjon</h2>
+        <div className="w-full lg:w-2/3 lg:py-8 lg:pr-8">
+          <h2 className="text-cream pt-8">Priser og informasjon</h2>
           <h3 className="mb-6 text-cream">E-mail Me!</h3>
           <p>
             Ønsker du å bestille en photoshoot eller har du bare et spørsmål til meg? Da er det bare å sende meg en mail, så kommer jeg tilbake til deg så snart som mulig! Din henvendelse er helt uforpliktende, så ikke nøl med å ta kontakt. Det er best å registrere deg for ønsket dato så tidlig som mulig.
@@ -28,14 +28,14 @@ export default function Contact() {
         </div>
 
         {/* Image column */}
-        <div className="w-full lg:w-1/3 p-8">
+        <div className="w-full lg:w-1/3 py-8">
           <img src={Poppy1} alt="Bilde" className="rounded-md" />
         </div>
       </div>
 
       <div className=" bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
-        <div className="w-full lg:w-1/2 p-8">
+        <div className="w-full lg:w-1/2 pt-8 lg:py-8 lg:pr-8">
           <h3 className="mb-6 text-[#21262B]">Follow us on Instagram</h3>
           <p className="text-[#21262B]">
             Mange kjenner oss gjennom instagram, så ikke nøl med å sende oss en melding der! Jeg svarer så fort jeg kan for å dele inspirasjon og svare på spørsmål.
@@ -48,9 +48,9 @@ export default function Contact() {
           </p>
         </div>
         {/* Image column */}
-        <div className="w-full lg:w-1/2 p-8">
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <InstagramEmbed url="https://www.instagram.com/ninawiik/" width={600} />
+        <div className="w-full lg:w-1/2 lg:py-8">
+          <div style={{ display: 'flex', justifyContent: 'right' }}>
+            <InstagramEmbed url="https://www.instagram.com/ninawiik/" width={750} />
           </div>
         </div>
       </div>
