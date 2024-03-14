@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  background-color: white;
+
+
+  font-family: 'Comfortaa', cursive;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1, h2 {
+  color: #CFC8CA;
+}
+
+h2 {
+  font-family: 'Lovelace-regular';
+  font-size: 32px;
+}
+
+h3 {
+  font-family: 'AngellaWhite';
+  font-size: 80px;
+  color: #CFC8CA;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0 20px 0;
+  color: #fdefe4;
+}
+
+.home-bg-image {
+  background-image: url(./images/iotop1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.about-bg-image {
+  background-image: url(./images/poppygreen.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.pricing-bg-image {
+  background-image: url(./images/poppybench.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.gallery-bg-image {
+  background-image: url(./images/iolaying.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.contact-bg-image {
+  background-image: url(./images/ioMain2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.logo {
+  background-image: url(./images/logo.png);
+  height: 100%;
+}
+
+.navbar {
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
