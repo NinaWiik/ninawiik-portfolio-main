@@ -43,104 +43,107 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start pb-10">
-          <div className="w-full">
-            <h3 className="my-4 text-[#21262B]">Priser</h3>
-          </div>
-          <div className="w-full flex items-center justify-start mx-0"> {/* Changed here */}
-            <div className="w-1/3 p-4 lg:p-8 bg-taupe rounded-lg mr-2"> {/* Modified here */}
-              <h2 className="mb-6 text-cream">Liten Pakke</h2>
-              <ul className="text-cream">
-                  <li>• 60 min fotografering</li>
-                  <li>• 1 hund</li>
-                  <li>• 5 redigerte bilder til privat bruksrett</li>
-                  <li>• Pris: 1900,-</li>
-                  <li>• 300,- per ekstra bilde</li>
-                </ul>
-            </div>
-            <div className="w-1/3 p-4 lg:p-8 bg-taupe rounded-lg mx-4"> {/* Modified here */}
-              <h2 className="mb-6 text-cream">Medium Pakke</h2>
-              <ul className="text-cream">
-                  <li>• 60-90 min fotografering</li>
-                  <li>• Flere hunder fra samme eier</li>
-                  <li>• 8 redigerte bilder til privat bruksrett</li>
-                  <li>• Pris: 2400,-</li>
-                  <li>• 300,- per ekstra bilde</li>
-              </ul>
-            </div>
-            <div className="w-1/3 p-4 lg:p-8 bg-taupe rounded-lg ml-2"> {/* Modified here */}
-              <h2 className="mb-6 text-cream">Stor Pakke</h2>
-              <ul className="text-cream">
-                  <li>• 60-120 min fotografering</li>
-                  <li>• Flere hunder fra samme eier</li>
-                  <li>• 12 editerte bilder til privat bruksrett</li>
-                  <li>• Pris: 2900,-</li>
-                  <li>• 300,- per ekstra bilde</li>
-                </ul>
-            </div>
-          </div>
-          <div className="w-full text-center p-4 lg:py-8 lg:pl-8 bg-taupe rounded-lg mt-6 mx-0"> {/* Modified here */}
-          <h2 className="mb-6 text-cream">Øvrige Priser</h2>
-              <p className="font-extrabold mb-2">Kjøreutgifter utenfor Vestfold: </p>
-              <p>5,- pr/km</p>
-
-              <p className="mt-8">*Egne priser for bedriftsfoto og bilder som skal brukes til kommersielt bruk. Ta kontakt for prisforespørsel. </p>
-          </div>
-        </div>
+        <div class="bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start pb-10">
+  <div class="w-full">
+    <h3 class="my-4 text-[#21262B]">Priser</h3>
+  </div>
+  <div class="w-full flex flex-col lg:flex-row justify-center">
+    <div class="flex flex-col justify-center w-full lg:w-1/3 p-4 lg:p-8 bg-taupe rounded-lg mb-4 lg:mx-2">
+      <h2 class="mb-4 text-cream">Liten Pakke</h2>
+      <ul class="text-cream">
+        <li>• 60 min fotografering</li>
+        <li>• 1 hund</li>
+        <li>• 5 redigerte bilder til privat bruksrett</li>
+        <li>• Pris: 1900,-</li>
+        <li>• 300,- per ekstra bilde</li>
+      </ul>
+    </div>
+    <div class="flex flex-col justify-center w-full lg:w-1/3 p-4 lg:p-8 bg-taupe rounded-lg mb-4 lg:mx-2">
+      <h2 class="mb-4 text-cream">Medium Pakke</h2>
+      <ul class="text-cream">
+        <li>• 60-90 min fotografering</li>
+        <li>• Flere hunder fra samme eier</li>
+        <li>• 8 redigerte bilder til privat bruksrett</li>
+        <li>• Pris: 2400,-</li>
+        <li>• 300,- per ekstra bilde</li>
+      </ul>
+    </div>
+    <div class="flex flex-col justify-center w-full lg:w-1/3 p-4 lg:p-8 bg-taupe rounded-lg mb-4 lg:mx-2">
+      <h2 class="mb-4 text-cream">Stor Pakke</h2>
+      <ul class="text-cream">
+        <li>• 60-120 min fotografering</li>
+        <li>• Flere hunder fra samme eier</li>
+        <li>• 12 editerte bilder til privat bruksrett</li>
+        <li>• Pris: 2900,-</li>
+        <li>• 300,- per ekstra bilde</li>
+      </ul>
+    </div>
+  </div>
 
 
-        <div className="w-full">
-          <img src={Kaja} alt="Bilde" className="" />
-        </div>
 
-        <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
-          {/* Text column */}
-          <div className="w-full py-8">
-            <h3 className="mb-6 text-cream">How it works!</h3>
-            <p>        
-              Målet mitt er å gjøre hele opplevelsen med meg sømløs, helt fra den første henvendelsen til levering av galleriet ditt! For å gi deg den beste opplevelsen har jeg laget 3 enkle trinn
-              som går gjennom tiden vår sammen og hva du kan forvente av fotograferingen.
-            </p>
-            <div className="w-full flex items-start justify-start mx-0 mt-8 text-center">
-            <div className="w-1/3 rounded-lg mr-6"> {/* Modified here */}
-              <h2 className="mb-2 text-cream text-[18px] underline">Steg 1 - Forespørsel og Planlegging</h2>
-                <p className="text-[14px] mt-0">
-                  Takk for at du valgte meg til å fange varige bilder av din beste venn! Allerede fra din første henvendelse vil du bli tilbudt et spørreskjema som går gjennom detaljer som dine visjoner for fotograferingen, din hunds behov og andre viktige spørsmål.
-                </p>
-                <p className="text-[14px]">
-                  Etter at du har fullført spørreskjemaet, vil vi diskutere svarene dine samt gå gjennom lokasjonsalternativer for å best tilpasse din visjon. Hvis du har bekymringer angående hunden din og deres oppførsel, er det på dette tidspunktet vi vil ta opp
-                  disse bekymringene og komme opp med en perfekt plan for å fange din hund så komfortabelt som mulig. 
-                </p>
-                <p className="text-[14px]">
-                  Dette er hvor vi organiserer din perfekte fotografering, og jeg vil være der hvert skritt på veien frem til fotograferingsdagen.
-                </p>
-            </div>
-            <div className="w-1/3 rounded-lg mx-6"> {/* Modified here */}
-              <h2 className="mb-2 text-cream text-[18px] underline">Steg 2 - Photoshoot Dagen</h2>
-                <p className="text-[14px] mt-0">
-                  Jeg vil ta kontakt med deg 5-7 dager før fotograferingen for å avklare alle detaljer. Ved ankomst vil vi utforske den valgte fotolokasjonen og la hunden din snuse og bli vant til det nye miljøet.
-                </p>
-                <p className="text-[14px]">
-                  Tiden vår sammen er ment å være stressfri og spennende for hunden din. Jeg vil aldri tvinge hunden din til å stå et sted eller gjøre noe de ikke er komfortable med under økten vår. Med mine anvisninger vil du leke med hunden din (kaste leker, pinner, kalle dem til deg, osv.) og plassere dem på bestemte områder mens jeg fanger øyeblikket.
-                </p>
-                <p className="text-[14px]">
-                  Ønsker du bilder sammen med din firbeinte venn, så finner vi de beste mulighetene for dette. Og om du ikke ønsker å være med i photoshooten, så er også dette helt greit!
-                </p>
-            </div>
-            <div className="w-1/3 rounded-lg ml-6"> {/* Modified here */}
-              <h2 className="mb-2 text-cream text-[18px] underline">Steg 3 - Bildelevering</h2>
-                <p className="text-[14px] mt-0">
-                  Etter photoshooten er ferdig, vil jeg gå igjennom bildene og med mitt trente øye finne de beste bildene og bruke tiden på å etterbehandle de, slik at de får den magiske stemningen, og viser deg og ditt dyr på mest fantastiske måte. 
-                </p>
-                <p className="text-[14px]">
-                Etterbehandlingen er det som er tidkrevende i en slik prosess, men innen 4 uker etter photoshooten (tid kommer an på arbeidsmegden jeg har fra før av) vil jeg levere bildene til deg.
-                </p>
-                <p className="text-[14px]">
-                  Du vil motta to versjoner av bildene, et eksemplar uten vannmerke, og et med et vannmerke. Skal bildene brukes i sosiale medier (Instagram, Facebook etc) så skal brukes bildet med vannmerke, og jeg krediteres som fotograf. 
-                </p>
-            </div>
-            </div>
-          </div>
+  <div class="flex justify-center items-center w-full p-4 lg:p-8 bg-taupe rounded-lg mb-4 lg:mx-2 flex-col">
+      <h2 className="mb-6 text-cream">Øvrige Priser</h2>
+      <p className="font-extrabold mb-2">Kjøreutgifter utenfor Vestfold: </p>
+      <p>5,- pr/km</p>
+      <p className="mt-8">
+        *Egne priser for bedriftsfoto og bilder som skal brukes til kommersielt bruk. Ta kontakt for prisforespørsel.
+      </p>
+    </div>
+  </div>
+<div className="w-full">
+  <img src={Kaja} alt="Bilde" className="" />
+</div>
+
+<div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
+  {/* Text column */}
+  <div className="w-full pt-8 lg:py-8">
+    <h3 className="mb-6 text-cream">How it works!</h3>
+    <p>        
+      Målet mitt er å gjøre hele opplevelsen med meg sømløs, helt fra den første henvendelsen til levering av galleriet ditt! For å gi deg den beste opplevelsen har jeg laget 3 enkle trinn
+      som går gjennom tiden vår sammen og hva du kan forvente av fotograferingen.
+    </p>
+    <div className="w-full flex flex-wrap items-start justify-start mx-0 mt-8 text-center">
+      <div className="w-full lg:w-1/3 rounded-lg mb-4 lg:pr-4 lg:mb-6"> {/* Adjusted width and margin */}
+        <h2 className="mb-2 text-cream text-[18px] underline">Steg 1 - Forespørsel og Planlegging</h2>
+        <p className="text-[14px] mt-0">
+          Takk for at du valgte meg til å fange varige bilder av din beste venn! Allerede fra din første henvendelse vil du bli tilbudt et spørreskjema som går gjennom detaljer som dine visjoner for fotograferingen, din hunds behov og andre viktige spørsmål.
+        </p>
+        <p className="text-[14px]">
+          Etter at du har fullført spørreskjemaet, vil vi diskutere svarene dine samt gå gjennom lokasjonsalternativer for å best tilpasse din visjon. Hvis du har bekymringer angående hunden din og deres oppførsel, er det på dette tidspunktet vi vil ta opp
+          disse bekymringene og komme opp med en perfekt plan for å fange din hund så komfortabelt som mulig. 
+        </p>
+        <p className="text-[14px]">
+          Dette er hvor vi organiserer din perfekte fotografering, og jeg vil være der hvert skritt på veien frem til fotograferingsdagen.
+        </p>
+      </div>
+      <div className="w-full lg:w-1/3 rounded-lg mb-4 lg:pr-6 lg:pl-6 lg:mb-6"> {/* Adjusted width and margin */}
+        <h2 className="mb-2 text-cream text-[18px] underline">Steg 2 - Photoshoot Dagen</h2>
+        <p className="text-[14px] mt-0">
+          Jeg vil ta kontakt med deg 5-7 dager før fotograferingen for å avklare alle detaljer. Ved ankomst vil vi utforske den valgte fotolokasjonen og la hunden din snuse og bli vant til det nye miljøet.
+        </p>
+        <p className="text-[14px]">
+          Tiden vår sammen er ment å være stressfri og spennende for hunden din. Jeg vil aldri tvinge hunden din til å stå et sted eller gjøre noe de ikke er komfortable med under økten vår. Med mine anvisninger vil du leke med hunden din (kaste leker, pinner, kalle dem til deg, osv.) og plassere dem på bestemte områder mens jeg fanger øyeblikket.
+        </p>
+        <p className="text-[14px]">
+          Ønsker du bilder sammen med din firbeinte venn, så finner vi de beste mulighetene for dette. Og om du ikke ønsker å være med i photoshooten, så er også dette helt greit!
+        </p>
+      </div>
+      <div className="w-full lg:w-1/3 rounded-lg mb-4 lg:pl-6"> {/* Adjusted width and margin */}
+        <h2 className="mb-2 text-cream text-[18px] underline">Steg 3 - Bildelevering</h2>
+        <p className="text-[14px] mt-0">
+          Etter photoshooten er ferdig, vil jeg gå igjennom bildene og med mitt trente øye finne de beste bildene og bruke tiden på å etterbehandle de, slik at de får den magiske stemningen, og viser deg og ditt dyr på mest fantastiske måte. 
+        </p>
+        <p className="text-[14px]">
+          Etterbehandlingen er det som er tidkrevende i en slik prosess, men innen 4 uker etter photoshooten (tid kommer an på arbeidsmegden jeg har fra før av) vil jeg levere bildene til deg.
+        </p>
+        <p className="text-[14px]">
+          Du vil motta to versjoner av bildene, et eksemplar uten vannmerke, og et med et vannmerke. Skal bildene brukes i sosiale medier (Instagram, Facebook etc) så skal brukes bildet med vannmerke, og jeg krediteres som fotograf. 
+        </p>
+      </div>
+    </div>
+  </div>
+
 
           {/* Image column */}
           {/* <div className="w-full lg:w-1/3 p-8">
@@ -149,7 +152,7 @@ export default function Home() {
         </div>
 
         <div className="bg-blush px-4 lg:px-40 flex flex-wrap items-center justify-start pb-10">
-        <div className="w-full py-8">
+        <div className="w-full pt-8 lg:py-8">
             <h3 className="mb-6 text-[#21262B]">Frequently Asked Questions</h3>
             <FAQ></FAQ>
           </div>

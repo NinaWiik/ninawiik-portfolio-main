@@ -8,8 +8,7 @@ export default function Contact() {
       <div className="bg-taupe px-4 lg:px-40 flex flex-wrap items-center justify-start">
         {/* Text column */}
         <div className="w-full lg:w-2/3 lg:py-8 lg:pr-8">
-          <h2 className="text-cream pt-8">Priser og informasjon</h2>
-          <h3 className="mb-6 text-cream">E-mail Me!</h3>
+          <h3 className="my-6 text-cream">E-mail Me!</h3>
           <p>
             Ønsker du å bestille en photoshoot eller har du bare et spørsmål til meg? Da er det bare å sende meg en mail, så kommer jeg tilbake til deg så snart som mulig! Din henvendelse er helt uforpliktende, så ikke nøl med å ta kontakt. Det er best å registrere deg for ønsket dato så tidlig som mulig.
           </p>
